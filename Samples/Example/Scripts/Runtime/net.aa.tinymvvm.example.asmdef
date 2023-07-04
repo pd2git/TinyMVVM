@@ -1,0 +1,21 @@
+{
+    "name": "net.aa.tinymvvm.example",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "ENABLE_DEMO"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.unity.ugui",
+            "expression": "1.0.0",
+            "define": "ENABLE_DEMO"
+        }
+    ],
+    "noEngineReferences": false
+}
