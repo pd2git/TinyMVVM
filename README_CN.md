@@ -1,6 +1,7 @@
 # TinyMVVM 
+语言：简体中文, [English](/README.md)
 
-这是有关本框架的一个简单说明。详见 **_"Example"_** 和 **_"Documentation"_** 文件夹。
+这是有关本框架的一个简单说明。详见 **_"[Example](/Samples/Example/)"_** 和 **_"[Documentation](/Documentation)"_** 文件夹。
 
 ## 版本［1.0.1］
 
@@ -14,4 +15,4 @@
 3. 根据项目需要按步骤1和2创建不同的模组，各模组间通过 **_View Model（控制模块）_** 通讯即可，而其它模块相对独立。
 
 ## 依赖
-- 如果需要查看 **_Documentation_** 文件夹 ，则需要安装 **_Unity UI（版本1.0以上）_** 。
+- 如果需要查看 **_"[Documentation](/Documentation)"_** 文件夹 ，则需要安装 **_Unity UI（版本1.0以上）_** 。
