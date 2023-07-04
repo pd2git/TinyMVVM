@@ -1,2 +1,2 @@
 # TinyMVVM
- This is a tiny MVVM framework, suitable for making some plug-ins.
+ This is a tiny MVVM framework for Unity, suitable for making some plug-ins.
