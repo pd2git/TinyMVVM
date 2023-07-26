@@ -3,11 +3,12 @@ Language：English, [简体中文](/README_CN.md)
 
 This is a brief description of the framework. See the folders **_"[Example](/Samples/Example/)"_** and **_"[Documentation](/Documentation)"_** for details.
 
-## version[1.0.1]
+## Version[1.1.0]
 
 ## Function
 1. This is a tiny MVVM framework for Unity, suitable for making some plug-ins.
 2. Orderly separation of code into **_Model_**, **_ViewModel_** and **_View_** three layers, easy maintenance and management, as well as multi-person collaboration.
+3. Objects are organized into object pools to improve the efficiency of object generation.
 
 ## Usage
 1. Design and initialize three modules: **_Model (data module)_**, **_View Model (control module)_** and **_View (view module)_**.

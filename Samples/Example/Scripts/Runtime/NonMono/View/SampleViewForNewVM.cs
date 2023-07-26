@@ -3,7 +3,7 @@
 * Copyright © AA. All rights reserved.
 * Author：AA
 * CreatTime：2023/06/26 22:47:06
-* Version: v1.0
+* Version: v1.1.0
 * Description：The demo of TinyMVVM view usage
 * ==========================================
 */
@@ -184,6 +184,35 @@ namespace AA.Framework.TinyMVVM.Demo.NonMono
 
             //
             Debug.Log('[' + GetType().Name + "]Has switched to the view model named '" + newViewModel + "'.");
+        }
+
+        #endregion
+
+        #region Break
+
+        /// <summary>
+        /// Call on the mvvm elements start to broke up all.
+        /// </summary>
+        protected override void OnBreakUpAllStart()
+        {
+            Debug.Log('[' + GetType().Name + "]Started break up all.");
+#if UNITY_INCLUDE_TESTS
+            // Mark log
+            LogMarker.Mark += "56>";
+#endif
+        }
+        
+        /// <summary>
+        /// Call on the mvvm elements combined completely.
+        /// </summary>
+        protected override void OnCombineComplete()
+        {
+            base.OnCombineComplete();
+            Debug.Log('[' + GetType().Name + "]Combine completed.");
+#if UNITY_INCLUDE_TESTS
+            // Mark log
+            LogMarker.Mark += "39>";
+#endif
         }
 
         #endregion

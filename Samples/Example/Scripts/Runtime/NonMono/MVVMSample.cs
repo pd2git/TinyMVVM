@@ -3,7 +3,7 @@
 * Copyright © AA. All rights reserved.
 * Author：AA
 * CreatTime：2023/06/26 15:46:07
-* Version: v1.0
+* Version: v1.1.0
 * Description：The demo of TinyMVVM usage
 * ==========================================
 */
@@ -30,7 +30,7 @@ namespace AA.Framework.TinyMVVM.Demo.NonMono
         /// <returns>the view model of this mvvm.</returns>
         public IViewModel<IModel> SwitchMVVM()
         {
-            if (m_MVVMHander == null)
+            if (m_MVVMHandler == null)
             {
                 Debug.LogWarning("Please initialize the handler of MVVM at first.");
                 return null;
@@ -39,17 +39,17 @@ namespace AA.Framework.TinyMVVM.Demo.NonMono
             // Switch next
             m_CurDataIndex = (m_CurDataIndex + 1) % m_MvvmDataList.Count;
             var data = m_MvvmDataList[m_CurDataIndex];
-            m_MVVMHander.RequestModification(data.Model);
-            m_MVVMHander.RequestModification(data.ViewModel);
-            m_MVVMHander.RequestModification(data.View);
+            m_MVVMHandler.RequestModification(data.Model);
+            m_MVVMHandler.RequestModification(data.ViewModel);
+            m_MVVMHandler.RequestModification(data.View);
             // Apply
-            if (!m_MVVMHander.ApplyModification())
+            if (!m_MVVMHandler.ApplyModification())
             {
                 Debug.LogWarning("Can not apply the modifications with some error.");
                 return null;
             }
             // 
-            return m_MVVMHander.CurViewModel;
+            return m_MVVMHandler.CurViewModel;
         }
 
         #endregion
@@ -79,7 +79,7 @@ namespace AA.Framework.TinyMVVM.Demo.NonMono
         /// <summary>
         /// the handler of MVVM.
         /// </summary>
-        private MVVMCore m_MVVMHander;
+        private MVVMCore m_MVVMHandler;
 
         /// <summary>
         /// Initialize
@@ -91,7 +91,7 @@ namespace AA.Framework.TinyMVVM.Demo.NonMono
         public bool Initialize(IView<SampleViewModel, SampleModel> view, IView<SampleViewModelNew, SampleModel> viewForNewVm, 
             IView<SampleViewModelForNewModel, SampleModelNew> viewForNewModel)
         {
-            m_MVVMHander = new MVVMCore();
+            m_MVVMHandler = new MVVMCore();
             // Initialize
             // Model
             var model = new SampleModel();
@@ -112,7 +112,7 @@ namespace AA.Framework.TinyMVVM.Demo.NonMono
             m_MvvmDataList.Add(new MVVMData(modelNew, viewModelForNewModel, viewForNewModel));
             
             // Combine the view with the model and the view model.
-            return m_MVVMHander.Combine(model, viewModel, view);
+            return m_MVVMHandler.Combine(model, viewModel, view);
         }
 
         /// <summary>
@@ -120,7 +120,7 @@ namespace AA.Framework.TinyMVVM.Demo.NonMono
         /// </summary>
         public void UnInitialize()
         {
-            m_MVVMHander.BreakUpAll();
+            m_MVVMHandler.BreakUpAll();
             m_MvvmDataList.Clear();
             m_CurDataIndex = 0;
         }
@@ -137,12 +137,12 @@ namespace AA.Framework.TinyMVVM.Demo.NonMono
         /// <summary>
         /// The index of the select mvvm data at this moment. 
         /// </summary>
-        private int m_CurDataIndex = 0;
+        private int m_CurDataIndex;
 
         /// <summary>
         /// The data struct of the mvvm.
         /// </summary>
-        private struct MVVMData
+        private readonly struct MVVMData
         {
             /// <summary>
             /// Initialize
