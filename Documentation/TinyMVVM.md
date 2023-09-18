@@ -55,10 +55,60 @@ This version of TinyMVVM is compatible with the following versions of the Unity 
 
 ## Known limitations
 
-TinyMVVM version 1.1.0 includes the following known limitations:
+TinyMVVM version 1.2.0 includes the following known limitations:
 
 * A MVVMCore object can only combine a group of the MVVM elements(1 model, 1 view model, 1 view) at a time.
 * The compatibility of the MVVM elements have to follow the rules of C# type conversions. **_For example, if you change the model, you have to change the view model and the view. Or if you only change the view model to the child class of the old view model, you do not need to change the view. You can cast it to fit the view. See the details in the Examples scripts._**
+
+## Lifecycle
+
+### MVVM
+
+#### The following is the lifecycle when we invoke the method **_Combine()_**:
+
+1. If the **_Model_** has been changed, the old model is unbinding. For the view mode and view binding it:
+   1. **ViewModel.OnOldModelUnbind()**:Invoked when the old model is unbinding.
+   2. **View.OnOldModelUnbind()**:Invoked when the old model is unbinding.
+2. If the **_View Model_** has been changed, the old view model is unbinding. For it`s binding mode and the view binding it:
+    1. **ViewModel.OnOldModelUnbind()**:Invoked when the old view model is unbinding to the model binding before.
+    2. **View.OnOldViewModelUnbind()**:Invoked when the view is unbinding to the view model binding before. 
+3. If the **_View_** has been changed, the view is unbinding. For it:
+    1. **View.OnOldModelUnbind()**:Invoked when the old view is unbinding to the model binding before.
+    2. **View.OnOldViewModelUnbind()**:Invoked when the old view is unbinding to the view model binding before.
+4. If the **_Model_** or the **_View Model_** has been changed, the new model is binding. For the old or new view model:
+    1. **ViewModel.OnMatchModel()**:Invoked when the view model is adapted to the model.
+    2. **ViewModel.OnNewModelBind()**:Invoked when the view model is binding to the model.
+    3. **ViewModel.OnBindModelComplete()**:Invoked when the view model binding is completed.
+5. If the **_View_** or the **_View Model_** has been changed, the view is matching and binding to the view mode. For the old or new view:
+    1. **View.OnMatchViewModel()**:Invoked when the view is adapted to the view model.
+    2. **View.OnNewViewModelBind()**:Invoked when the view is binding to the view model.
+    3. **View.OnBindViewModelComplete()**:Invoked when the view binding is completed.
+6. If the **_View_** or the **_Model_** has been changed, the view is binding. For the old or new view:
+    1. **View.OnNewModelBind()**:Invoked when the view is binding to the model.
+    2. **View.OnBindModelComplete()**:Invoked when the view binding is completed.
+7. If the combining is completed successfully, **Model.OnCombineComplete()** is invoked. 
+8. If the combining is completed successfully, **ViewModel.OnCombineComplete()** is invoked.
+9. If the combining is completed successfully, **View.OnCombineComplete()** is invoked.
+
+#### The following is the lifecycle when we invoke the method **_BreakUpAll()_**:
+
+1. **View.OnBreakUpAllStart()** is invoked.
+2. **View.OnOldModelUnbind()** is invoked.
+3. **View.OnOldViewModelUnbind()** is invoked.
+4. **View.OnBreakUpAllComplete()** is invoked.
+5. **ViewModel.OnBreakUpAllStart()** is invoked. 
+6. **ViewModel.OnOldModelUnbind()** is invoked.
+7. **View.OnBreakUpAllComplete()** is invoked.
+8. **Model.OnBreakUpAllStart()** is invoked.
+9. **Model.OnBreakUpAllComplete()** is invoked.
+   
+### Object Pool
+
+The following is the lifecycle:
+1. OnSpawn():Invoked when the object is generated.
+2. OnRecycle():Invoked when the object is reclaimed.
+3. OnRelease():Invoked when the object is released.
+
 
 ## Package contents
 
@@ -76,6 +126,7 @@ The following table indicates the features of each folder in the location below:
 
 |Date|Reason|
 |---|---|
+|2023-09-18|Document(v1.2) updated for package version 1.2.0.<br>New modifications: <li>Add the module 'Lifecycle' to 'Technical details'.|
 |2023-07-26|Unedited. Published to package.|
 |2023-07-25|Document(v1.1.1.1) updated for package version 1.1.0.<br>New modifications: <li>Fixed some errors of the document.|
 |2023-07-14|Document(v1.1) updated for package version 1.1.0.<br>New modifications: <li>Added the usage about a new module named 'Object Pool'.<li>Add the new package contents about the samples of a new <br> module named 'Object Pool'.<li>Fixed some errors of the document.|

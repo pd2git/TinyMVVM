@@ -9,13 +9,13 @@
 */
 
 using System.Text;
-using AA.Framework.TinyMVVM.Model;
-using AA.Framework.TinyMVVM.View;
-using AA.Framework.TinyMVVM.ViewMode;
+using AA.TinyMVVM.Model;
+using AA.TinyMVVM.View;
+using AA.TinyMVVM.ViewMode;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace AA.Framework.TinyMVVM.Demo.Mono
+namespace AA.TinyMVVM.Demo.Mono
 {
     /// <summary>
     /// The demo of TinyMVVM view usage on the MonoBehaviour class.

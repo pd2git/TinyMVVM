@@ -2,6 +2,15 @@
 This is a tiny MVVM framework, suitable for making some plug-ins.
 <br>Orderly separation of code into Model, ViewModel and View three layers, easy maintenance and management, as well as multi-person collaboration.
 
+## [1.2.0] - 2023-09-18
+
+### Add
+- Add the readme about the lifecycle of this framework to the document.
+
+### Changed
+- Change the namespace of the framework.
+- Optimized the log of the codes of some examples.
+
 ## [1.1.0] - 2023-07-26
 
 ### Added

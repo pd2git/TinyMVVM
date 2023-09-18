@@ -11,7 +11,7 @@
 
 #if UNITY_INCLUDE_TESTS
 
-namespace AA.Framework.TinyMVVM.Demo
+namespace AA.TinyMVVM.Demo
 {
     /// <summary>
     /// Mark logs for test

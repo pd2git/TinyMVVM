@@ -8,10 +8,10 @@
 * ==========================================
 */
 
-using AA.Framework.TinyMVVM.ViewMode;
+using AA.TinyMVVM.ViewMode;
 using UnityEngine;
 
-namespace AA.Framework.TinyMVVM.Demo.NonMono
+namespace AA.TinyMVVM.Demo.NonMono
 {
     /// <summary>
     /// The demo of TinyMVVM view model usage. It`s a new view model.

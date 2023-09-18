@@ -8,7 +8,7 @@
 * ==========================================
 */
 
-namespace AA.Framework.TinyMVVM.Demo.NonMono
+namespace AA.TinyMVVM.Demo.NonMono
 {
     /// <summary>
     /// Another demo of TinyMVVM view model usage. It`s a child of SampleViewModel.

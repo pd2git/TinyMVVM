@@ -8,10 +8,10 @@
 * ==========================================
 */
 
-using AA.Framework.TinyMVVM.Base;
-using AA.Framework.TinyMVVM.Model;
+using AA.TinyMVVM.Base;
+using AA.TinyMVVM.Model;
 
-namespace AA.Framework.TinyMVVM.Demo.Mono
+namespace AA.TinyMVVM.Demo.Mono
 {
     /// <summary>
     /// Another demo of TinyMVVM model usage on the MonoBehaviour class.

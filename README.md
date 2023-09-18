@@ -3,7 +3,7 @@ Language：English, [简体中文](/README_CN.md)
 
 This is a brief description of the framework. See the folders **_"[Example](/Samples/Example/)"_** and **_"[Documentation](/Documentation)"_** for details.
 
-## Version[1.1.0]
+## Version[1.2.0]
 
 ## Function
 1. This is a tiny MVVM framework for Unity, suitable for making some plug-ins.

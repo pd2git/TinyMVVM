@@ -3,15 +3,15 @@
 * Copyright © AA. All rights reserved.
 * Author：AA
 * CreatTime：2023/07/11 16:50:40
-* Version: v1.1.0
+* Version: v1.2
 * Description：The pool object test the basic features of the Object Pool.
 * ==========================================
 */
 
-using AA.Framework.TinyMVVM.ObjectPool;
+using AA.TinyMVVM.ObjectPool;
 using UnityEngine;
 
-namespace AA.Framework.TinyMVVM.Demo.ObjectPool
+namespace AA.TinyMVVM.Demo.ObjectPool
 {
     /// <summary>
     /// The pool object test the basic features of the Object Pool.
@@ -40,7 +40,7 @@ namespace AA.Framework.TinyMVVM.Demo.ObjectPool
         /// <param name="paramsList">the list of the params</param>
         public void OnSpawn(params object[] paramsList)
         {
-            Debug.Log('[' + GetType().Name + "]OnSpawn.");
+            Debug.Log($"[{GetType().Name}][Name:{Name}]OnSpawn.");
 #if UNITY_INCLUDE_TESTS
             // Mark log
             LogMarker.Mark += "43>";
@@ -54,7 +54,7 @@ namespace AA.Framework.TinyMVVM.Demo.ObjectPool
         {
             // Should reset the value in the class.
             Name = string.Empty;
-            Debug.Log('[' + GetType().Name + "]OnRecycle.");
+            Debug.Log($"[{GetType().Name}][Name:{Name}]OnRecycle.");
 #if UNITY_INCLUDE_TESTS
             // Mark log
             LogMarker.Mark += "44>";
@@ -68,7 +68,7 @@ namespace AA.Framework.TinyMVVM.Demo.ObjectPool
         {
             // Should clear the value in the class.
             Name = null;
-            Debug.Log('[' + GetType().Name + "]OnRelease.");
+            Debug.Log($"[{GetType().Name}][Name:{Name}]OnRelease.");
 #if UNITY_INCLUDE_TESTS
             // Mark log
             LogMarker.Mark += "45>";

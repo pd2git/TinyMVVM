@@ -8,9 +8,9 @@
 * ==========================================
 */
 
-using AA.Framework.TinyMVVM.ViewMode;
+using AA.TinyMVVM.ViewMode;
 
-namespace AA.Framework.TinyMVVM.Demo.Mono
+namespace AA.TinyMVVM.Demo.Mono
 {
     /// <summary>
     /// Another demo of TinyMVVM view model usage on the MonoBehaviour class.

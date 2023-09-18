@@ -8,11 +8,11 @@
 * ==========================================
 */
 
-using AA.Framework.TinyMVVM.ObjectPool;
+using AA.TinyMVVM.ObjectPool;
 using System.Collections;
 using UnityEngine;
 
-namespace AA.Framework.TinyMVVM.Demo.ObjectPool
+namespace AA.TinyMVVM.Demo.ObjectPool
 {
     /// <summary>
     /// The sample test the basic features of the Object Pool.

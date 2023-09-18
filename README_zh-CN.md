@@ -3,7 +3,7 @@
 
 这是有关本框架的一个简单说明。详见 **_"[Example](/Samples/Example/)"_** 和 **_"[Documentation](/Documentation)"_** 文件夹。
 
-## 版本［1.1.0］
+## 版本［1.2.0］
 
 ## 功能
 1. 这是一个基于Unity的微小的MVVM框架，适用于制作一些插件。

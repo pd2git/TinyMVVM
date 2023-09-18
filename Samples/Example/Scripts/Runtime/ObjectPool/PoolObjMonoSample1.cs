@@ -8,11 +8,11 @@
 * ==========================================
 */
 
-using AA.Framework.TinyMVVM.ObjectPool;
+using AA.TinyMVVM.ObjectPool;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace AA.Framework.TinyMVVM.Demo.ObjectPool
+namespace AA.TinyMVVM.Demo.ObjectPool
 {
     /// <summary>
     /// The pool object test the basic features of the Object Pool for mono objects.

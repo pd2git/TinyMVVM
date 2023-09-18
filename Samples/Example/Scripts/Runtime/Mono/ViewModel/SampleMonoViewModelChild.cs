@@ -9,7 +9,7 @@
 */
 
 
-namespace AA.Framework.TinyMVVM.Demo.Mono
+namespace AA.TinyMVVM.Demo.Mono
 {
     /// <summary>
     /// Another demo of TinyMVVM view model usage on the MonoBehaviour class. It is the child of the SampleMonoViewModel class.

@@ -8,10 +8,10 @@
 * ==========================================
 */
 
-using AA.Framework.TinyMVVM.Base;
+using AA.TinyMVVM.Base;
 using UnityEngine;
 
-namespace AA.Framework.TinyMVVM.Demo.NonMono
+namespace AA.TinyMVVM.Demo.NonMono
 {
     /// <summary>
     /// The demo of TinyMVVM model usage.
