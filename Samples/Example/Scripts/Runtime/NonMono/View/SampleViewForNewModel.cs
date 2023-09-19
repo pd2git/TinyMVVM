@@ -3,7 +3,7 @@
 * Copyright © AA. All rights reserved.
 * Author：AA
 * CreatTime：2023/06/26 22:40:06
-* Version: v1.1.0
+* Version: v1.2
 * Description：The demo of TinyMVVM view usage
 * ==========================================
 */

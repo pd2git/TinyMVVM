@@ -3,7 +3,7 @@
 * Copyright © AA. All rights reserved.
 * Author：AA
 * CreatTime：2023/07/12 11:32:40
-* Version: v1.1.0
+* Version: v1.2
 * Description：The pool object test the basic features of the Object Pool for mono objects.
 * ==========================================
 */
