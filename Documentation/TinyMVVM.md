@@ -21,10 +21,10 @@ This package includes examples about the features above. For more information, s
 To install this package, follow the any one method below:
 
 - Downloaded the release unity package file to local and import it to the project. See [Importing local asset packages](https://docs.unity3d.com/Manual/AssetPackagesImport.html).
-- [Git URL](https://docs.unity3d.com/Packages/com.unity.package-manager-ui@latest/index.html)
+- [Git URL](https://docs.unity3d.com/cn/current/Manual/upm-ui-giturl.html)
 - [Local Folder](https://docs.unity3d.com/Manual/upm-ui-local.html)
 
-For more information, see [Package Manager Window](https://docs.unity3d.com/Packages/com.unity.package-manager-ui@latest/index.html)
+For more information, see [Package Manager Window](https://docs.unity3d.com/cn/current/Manual/upm-ui.html)
 
 In addition, you need to install the following resources when use the samples :
 
