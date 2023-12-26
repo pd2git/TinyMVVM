@@ -2,6 +2,11 @@
 This is a tiny MVVM framework, suitable for making some plug-ins.
 <br>Orderly separation of code into Model, ViewModel and View three layers, easy maintenance and management, as well as multi-person collaboration.
 
+## [1.2.1] - 2023-12-26
+
+### Fixed
+- Fixed the issue that the core module failed to be compiled on the Android platform in the scripting backend of IL2CPP.
+
 ## [1.2.0] - 2023-09-18
 
 ### Add
