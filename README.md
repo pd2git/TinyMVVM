@@ -1,5 +1,5 @@
 # TinyMVVM 
-Language：English, [简体中文](/README_CN.md)
+Language：English, [简体中文](./README_zh-CN.md)
 
 This is a brief description of the framework. See the folders **_"[Example](/Samples/Example/)"_** and **_"[Documentation](/Documentation)"_** for details.
 
